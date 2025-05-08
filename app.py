@@ -21,9 +21,9 @@ if st.button("Get Answer"):
 
         with st.spinner("Processing your question..."):
             try:
-                st.write(f"**Your Question:** {question}")
+                st.write(f"**Your Question:** {question_text}") # Modified
 
-                answer = generate_answer(image, question)
+                answer = generate_answer(image, question_text) # Modified
                 
                 # Display results
                 st.subheader("Answer:")
