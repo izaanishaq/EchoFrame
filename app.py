@@ -17,7 +17,7 @@ if st.button("Get Answer"):
     if uploaded_image_file is not None and question_text: # Modified
         # Process the image
         image = Image.open(uploaded_image_file)
-        st.image(image, caption="Uploaded Image.", use_container_width=True)
+        st.image(image, caption="Uploaded Image.", width=300) # Modified
 
         with st.spinner("Processing your question..."):
             try:
