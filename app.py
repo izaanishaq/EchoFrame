@@ -5,7 +5,7 @@ import os
 
 from qa import generate_answer
 
-st.set_page_config(page_title="Ask-the-Image: Multimodal QA App", layout="centered")
+st.set_page_config(page_title="EchoFrame | Ask-the-Image", layout="centered")
 
 st.title("Ask-the-Image: Multimodal QA App")
 st.markdown("Upload an image, type your question, and the app will answer.") # Modified
@@ -17,7 +17,7 @@ if st.button("Get Answer"):
     if uploaded_image_file is not None and question_text: # Modified
         # Process the image
         image = Image.open(uploaded_image_file)
-        st.image(image, caption="Uploaded Image.", use_column_width=True)
+        st.image(image, caption="Uploaded Image.", use_container_width=True)
 
         with st.spinner("Processing your question..."):
             try:
